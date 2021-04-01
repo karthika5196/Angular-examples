@@ -1,0 +1,22 @@
+<p>employee-detail works!</p>
+<h2>HI</h2>
+<h2>ngIf Example</h2>
+<div *ngIf="display;then thenblock;else elseblock">Hi helloooo</div>
+<ng-template #thenblock>Welcome</ng-template>
+<ng-template #elseblock>Welcome to structural directive</ng-template>
+
+<h2>Two-Way Binding</h2>
+<label>TwoWay Binding</label>
+<input [(ngModel)]="name" type="text">
+<input [(ngModel)]="email" type="email">
+{{name}}
+<h2>Input Example</h2>
+<app-input-output [full]="name" [mail]="email" (send)="receivedata=$event"></app-input-output>
+<h1>{{receivedata}}</h1>
+<h2>Inbuild Pipe Example</h2>
+<p>Date:{{day|date}} <br>Number : {{num|number}} <br> Percent:{{num|percent}}<br> Currency:{{num|currency}} <br> Uppercase:{{name|uppercase}} <br> Lowercase:{{name|lowercase}} <br> Titlecase:{{name|titlecase}}</p>
+<p>Date:{{day|date: 'dd/MMM-yyyy'}} <br>Number : {{num|number: '8.0-4'}} <br> Percent:{{num|percent:'2.0-2'}} <br> Currency:{{num|currency:'INR'}}</p>
+<p>Object details: {{obj|json}}<br> Array: {{arr|json}}</p>
+<p>Object details: {{obj|json|titlecase}}<br> Array: {{arr|slice:1:2}}</p>
+<p>{{'karthika'|pureImpure:'Manickavel'}}</p>
+<h2>Example for Async Pipe</h2>
